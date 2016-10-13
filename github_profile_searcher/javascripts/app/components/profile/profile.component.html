@@ -25,4 +25,26 @@
       </div>
     </div>
   </div>
+  <section class="panel panel-default">
+    <header class="panel-heading">
+      <h3 class="panel-title"><strong>User Repos</strong></h3>
+    </header>
+    <div class="panel-body">
+      <article class="row repo"  *ngFor="let repo of repos">
+        <div class="col-md-9">
+          <header>
+            <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+          </header>
+          <section>
+            <p>{{repo.description}}</p>
+          </section>
+        </div>
+        <footer class="col-md-3">
+          <span class="label label-default">{{repo.watchers}} Watchers</span>
+          <span class="label label-primary">{{repo.forks}} Forks</span>
+        </footer>
+        <div class="col-md-12"><hr/></div>
+      </article>
+    </div>
+  </section>
 </div>
