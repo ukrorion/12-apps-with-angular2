@@ -23,4 +23,9 @@ export class GithubService{
     let link_to_repos = 'http://api.github.com/users/'+this.username+'/repos?client_id='+this.client_id+'&client_secret='+this.client_secret;
     return this.http.get(link_to_repos).map(res => res.json());
   }
+
+  updateUser(username: string){
+    if(username.length > 0)
+      this.username = username;
+  }
 }
